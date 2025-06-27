@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -133,181 +133,16 @@
     <div class="toggle" onclick="document.body.classList.toggle('dark')">🌓 toggle dark mode</div>
     <footer>© 2025 Makarand Gokhale</footer>
   </div>
-</body>
-</html>
- -->
-
-
- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Makarand Gokhale</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <style>
-    :root {
-      --bg-light: #f9f9f9;
-      --text-light: #0f0f0f;
-      --accent-light: #2f81f7;
-      --muted-light: #6c6c6c;
-      --card-light: #ffffff;
-
-      --bg-dark: #0d1117;
-      --text-dark: #f9f9f9;
-      --accent-dark: #58a6ff;
-      --muted-dark: #8b949e;
-      --card-dark: #161b22;
-    }
-
-    body {
-      margin: 0;
-      padding: 2rem;
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg-light);
-      color: var(--text-light);
-      transition: background 0.3s, color 0.3s;
-    }
-
-    body.dark {
-      background-color: var(--bg-dark);
-      color: var(--text-dark);
-    }
-
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 3rem;
-      font-weight: 900;
-      background: linear-gradient(to right, #3b82f6, #8b5cf6, #ec4899);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 0.5rem;
-    }
-
-    .subtitle {
-      font-size: 1.25rem;
-      color: var(--muted-light);
-      font-weight: 600;
-      margin-bottom: 2rem;
-    }
-
-    body.dark .subtitle {
-      color: var(--muted-dark);
-    }
-
-    .link-grid {
-      display: grid;
-      gap: 1rem;
-      grid-template-columns: 1fr;
-    }
-
-    .link-item {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      background: var(--card-light);
-      border: 1px solid var(--accent-light);
-      border-radius: 0.75rem;
-      padding: 1rem;
-      text-decoration: none;
-      color: var(--text-light);
-      font-weight: 500;
-      transition: background 0.2s, transform 0.2s;
-    }
-
-    .link-item:hover {
-      background: var(--accent-light);
-      color: white;
-      transform: translateY(-2px);
-    }
-
-    body.dark .link-item {
-      background: var(--card-dark);
-      border-color: var(--accent-dark);
-      color: var(--text-dark);
-    }
-
-    body.dark .link-item:hover {
-      background: var(--accent-dark);
-      color: white;
-    }
-
-    .link-item i {
-      font-size: 1.2rem;
-    }
-
-    .toggle {
-      margin-top: 2.5rem;
-      font-size: 0.9rem;
-      color: var(--muted-light);
-      cursor: pointer;
-    }
-
-    body.dark .toggle {
-      color: var(--muted-dark);
-    }
-
-    .toggle:hover {
-      color: var(--accent-light);
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 3rem;
-      font-size: 0.75rem;
-      color: var(--muted-light);
-    }
-
-    body.dark footer {
-      color: var(--muted-dark);
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Makarand Gokhale</h1>
-    <div class="subtitle">deep learning technologist</div>
-
-    <div class="link-grid">
-      <a class="link-item" href="Resume_Makarand_Gokhale.pdf" target="_blank">
-        <i class="fas fa-file-alt"></i> Resume
-      </a>
-      <a class="link-item" href="SOP_Makarand_Gokhale.pdf" target="_blank">
-        <i class="fas fa-scroll"></i> SOP
-      </a>
-      <a class="link-item" href="mailto:makarand0211@gmail.com">
-        <i class="fas fa-envelope"></i> Email
-      </a>
-      <a class="link-item" href="tel:+919901252324">
-        <i class="fas fa-phone"></i> Call
-      </a>
-      <a class="link-item" href="https://github.com/Saberzerker" target="_blank">
-        <i class="fab fa-github"></i> GitHub
-      </a>
-      <a class="link-item" href="https://linkedin.com/in/makarand-gokhale0211" target="_blank">
-        <i class="fab fa-linkedin"></i> LinkedIn
-      </a>
-    </div>
-
-    <div class="toggle" onclick="toggleTheme()">🌓 toggle dark mode</div>
-    <footer>© 2025 Makarand Gokhale</footer>
-  </div>
-
-  <script>
+    <script>
     function toggleTheme() {
       document.body.classList.toggle('dark');
     }
 
-    // Set dark mode by system preference
+    // Set theme based on system preference
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     if (prefersDark) document.body.classList.add('dark');
   </script>
 </body>
 </html>
+
+
