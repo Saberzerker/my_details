@@ -128,12 +128,11 @@
 </html>
  -->
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <title>Makarand Gokhale | WIP Portfolio</title>
   <link rel="icon" href="favicon.ico" />
   <style>
@@ -156,8 +155,14 @@
       font-family: 'Segoe UI', sans-serif;
       background-color: var(--bg);
       color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem 1rem;
       text-align: center;
-      padding: 3rem 1rem;
+      box-sizing: border-box;
       transition: background 0.3s, color 0.3s;
     }
 
@@ -241,22 +246,24 @@
   </style>
 </head>
 <body>
-  <h1>Makarand Gokhale</h1>
-  <h2>Deep Learning Technologist</h2>
-  <div class="badge">🚧 Portfolio v0 – Work in Progress</div>
+  <main>
+    <h1>Makarand Gokhale</h1>
+    <h2>Deep Learning Technologist</h2>
+    <div class="badge">🚧 Portfolio v0 – Work in Progress</div>
 
-  <p>Scan or click below to access everything you need:</p>
+    <p>Scan or click below to access everything you need:</p>
 
-  <a class="link-btn" href="Resume_Makarand_Gokhale.pdf" target="_blank">📄 View My Resume</a>
-  <a class="link-btn" href="SOP_Makarand_Gokhale.pdf" target="_blank">📝 View My SOP</a>
-  <a class="link-btn" href="mailto:makarand0211@gmail.com">✉️ Email Me</a>
-  <a class="link-btn" href="tel:+919901252324">📞 Call Me</a>
-  <a class="link-btn" href="https://github.com/Saberzerker" target="_blank" rel="noopener noreferrer">💻 GitHub</a>
-  <a class="link-btn" href="https://www.linkedin.com/in/makarand-gokhale0211/" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
+    <a class="link-btn" href="Resume_Makarand_Gokhale.pdf" target="_blank">📄 View My Resume</a>
+    <a class="link-btn" href="SOP_Makarand_Gokhale.pdf" target="_blank">📝 View My SOP</a>
+    <a class="link-btn" href="mailto:makarand0211@gmail.com">✉️ Email Me</a>
+    <a class="link-btn" href="tel:+919901252324">📞 Call Me</a>
+    <a class="link-btn" href="https://github.com/Saberzerker" target="_blank" rel="noopener noreferrer">💻 GitHub</a>
+    <a class="link-btn" href="https://www.linkedin.com/in/makarand-gokhale0211/" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
 
-  <div class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</div>
+    <div class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</div>
 
-  <footer>© 2025 Makarand Gokhale | This page is a temporary preview</footer>
+    <footer>© 2025 Makarand Gokhale | This page is a temporary preview</footer>
+  </main>
 
   <script>
     function toggleTheme() {
