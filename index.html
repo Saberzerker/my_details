@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -95,6 +95,133 @@
       🌓 Toggle Dark Mode
     </div>
   </div>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Makarand Gokhale | WIP Portfolio</title>
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    :root {
+      --bg: #f9f9f9;
+      --text: #111;
+      --card: #ffffff;
+      --accent: #0059ff;
+    }
+
+    body.dark {
+      --bg: #111;
+      --text: #f9f9f9;
+      --card: #1e1e1e;
+      --accent: #3f8cff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      text-align: center;
+      padding: 3rem 1rem;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      background: linear-gradient(to right, #38bdf8, #a78bfa, #34d399);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 900;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: var(--text);
+      opacity: 0.7;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #ffe500;
+      color: #111;
+      font-weight: 600;
+      padding: 0.3rem 0.8rem;
+      border-radius: 8px;
+      margin: 1rem 0 2rem;
+    }
+
+    .link-btn {
+      display: block;
+      background-color: var(--card);
+      padding: 1rem;
+      margin: 1rem auto;
+      border-radius: 12px;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+      transition: all 0.2s ease;
+    }
+
+    .link-btn:hover {
+      transform: scale(1.02);
+      background-color: var(--accent);
+      color: white;
+    }
+
+    .theme-toggle {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+      opacity: 0.6;
+    }
+
+    .theme-toggle:hover {
+      opacity: 1;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.8rem;
+      opacity: 0.5;
+    }
+  </style>
+</head>
+<body>
+  <h1>Makarand Gokhale</h1>
+  <h2>Deep Learning Technologist</h2>
+  <div class="badge">🚧 Portfolio v0 – Work in Progress</div>
+
+  <p>Scan or click below to access everything you need:</p>
+
+  <a class="link-btn" href="Resume_Makarand_Gokhale.pdf" target="_blank">📄 View My Resume</a>
+  <a class="link-btn" href="SOP_Makarand_Gokhale.pdf" target="_blank">📝 View My SOP</a>
+  <a class="link-btn" href="mailto:makarand0211@gmail.com">✉️ Email Me</a>
+  <a class="link-btn" href="tel:+919901252324">📞 Call Me</a>
+  <a class="link-btn" href="https://github.com/Saberzerker" target="_blank" rel="noopener noreferrer">💻 GitHub</a>
+  <a class="link-btn" href="https://www.linkedin.com/in/makarand-gokhale0211/" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
+
+  <!-- Optional future link -->
+  <!-- <a class="link-btn" href="https://mak.xyz">🚀 Visit Full Portfolio (Coming Soon)</a> -->
+
+  <div class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</div>
+
+  <footer>© 2025 Makarand Gokhale | This page is a temporary preview</footer>
 
   <script>
     function toggleTheme() {
