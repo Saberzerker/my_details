@@ -1,271 +1,155 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-  <title>Makarand Gokhale | WIP Portfolio</title>
-  <link rel="icon" href="favicon.ico" />
-  <style>
-    :root {
-      --bg: #f9f9f9;
-      --text: #111;
-      --card: #ffffff;
-      --accent: #0059ff;
-    }
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>  
+  <title>Makarand Gokhale | WIP Portfolio</title>  
+  <link rel="icon" href="favicon.ico" />  
+  <style>  
+    :root {  
+      --bg: #f9f9f9;  
+      --text: #111;  
+      --card: #ffffff;  
+      --accent: #0059ff;  
+    }  body.dark {  
+  --bg: #111;  
+  --text: #f9f9f9;  
+  --card: #1e1e1e;  
+  --accent: #3f8cff;  
+}  
 
-    body.dark {
-      --bg: #111;
-      --text: #f9f9f9;
-      --card: #1e1e1e;
-      --accent: #3f8cff;
-    }
+body {  
+  margin: 0;  
+  font-family: 'Segoe UI', sans-serif;  
+  background-color: var(--bg);  
+  color: var(--text);  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
+  justify-content: center;  
+  min-height: 100vh;  
+  padding: 2rem 1rem;  
+  text-align: center;  
+  box-sizing: border-box;  
+  transition: background 0.3s, color 0.3s;  
+}  
 
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 2rem 1rem;
-      text-align: center;
-      box-sizing: border-box;
-      transition: background 0.3s, color 0.3s;
-    }
+main {  
+  width: 100%;  
+  max-width: 480px;  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
+}  
 
-    main {
-      width: 100%;
-      max-width: 480px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+h1 {  
+  font-size: 2.5rem;  
+  background: linear-gradient(to right, #38bdf8, #a78bfa, #34d399);  
+  -webkit-background-clip: text;  
+  -webkit-text-fill-color: transparent;  
+  font-weight: 900;  
+  margin-bottom: 0.5rem;  
+}  
 
-    h1 {
-      font-size: 2.5rem;
-      background: linear-gradient(to right, #38bdf8, #a78bfa, #34d399);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-weight: 900;
-      margin-bottom: 0.5rem;
-    }
+h2 {  
+  font-size: 1.5rem;  
+  color: var(--text);  
+  opacity: 0.7;  
+  margin-bottom: 1rem;  
+}  
 
-    h2 {
-      font-size: 1.5rem;
-      color: var(--text);
-      opacity: 0.7;
-      margin-bottom: 1rem;
-    }
+.badge {  
+  display: inline-block;  
+  background: #ffe500;  
+  color: #111;  
+  font-weight: 600;  
+  padding: 0.3rem 0.8rem;  
+  border-radius: 8px;  
+  margin: 1rem 0 2rem;  
+}  
 
-    .badge {
-      display: inline-block;
-      background: #ffe500;
-      color: #111;
-      font-weight: 600;
-      padding: 0.3rem 0.8rem;
-      border-radius: 8px;
-      margin: 1rem 0 2rem;
-    }
+p {  
+  max-width: 90%;  
+  margin: 0 auto 2rem;  
+}  
 
-    p {
-      max-width: 90%;
-      margin: 0 auto 2rem;
-    }
+.link-btn {  
+  display: block;  
+  background-color: var(--card);  
+  padding: 1rem;  
+  margin: 1rem 0;  
+  border-radius: 12px;  
+  text-decoration: none;  
+  color: var(--accent);  
+  font-weight: bold;  
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);  
+  width: 100%;  
+  max-width: 400px;  
+  transition: all 0.2s ease;  
+}  
 
-    .link-btn {
-      display: block;
-      background-color: var(--card);
-      padding: 1rem;
-      margin: 1rem 0;
-      border-radius: 12px;
-      text-decoration: none;
-      color: var(--accent);
-      font-weight: bold;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      width: 100%;
-      max-width: 400px;
-      transition: all 0.2s ease;
-    }
+.link-btn:hover {  
+  transform: scale(1.02);  
+  background-color: var(--accent);  
+  color: white;  
+}  
 
-    .link-btn:hover {
-      transform: scale(1.02);
-      background-color: var(--accent);
-      color: white;
-    }
+.theme-toggle {  
+  margin-top: 2rem;  
+  font-size: 0.9rem;  
+  cursor: pointer;  
+  opacity: 0.6;  
+}  
 
-    .theme-toggle {
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      cursor: pointer;
-      opacity: 0.6;
-    }
+.theme-toggle:hover {  
+  opacity: 1;  
+}  
 
-    .theme-toggle:hover {
-      opacity: 1;
-    }
+footer {  
+  margin-top: 3rem;  
+  font-size: 0.8rem;  
+  opacity: 0.5;  
+}  
 
-    footer {
-      margin-top: 3rem;
-      font-size: 0.8rem;
-      opacity: 0.5;
-    }
+@media (max-width: 600px) {  
+  h1 {  
+    font-size: 2rem;  
+  }  
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
-      }
+  h2 {  
+    font-size: 1.1rem;  
+  }  
 
-      h2 {
-        font-size: 1.1rem;
-      }
+  .link-btn {  
+    font-size: 0.95rem;  
+    padding: 0.8rem 1rem;  
+  }  
+}
 
-      .link-btn {
-        font-size: 0.95rem;
-        padding: 0.8rem 1rem;
-      }
-    }
+  </style>  
+</head>  
+<body>  
+  <main>  
+    <h1>Makarand Gokhale</h1>  
+    <h2>Deep Learning Technologist</h2>  
+    <div class="badge">🚧 Portfolio v0 – Work in Progress</div>  <p>Scan or click below to access everything you need:</p>  
 
-    /* Modal */
-    .modal-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background-color: rgba(0, 0, 0, 0.6);
-      z-index: 999;
-      justify-content: center;
-      align-items: center;
-    }
+<a class="link-btn" href="Resume_Makarand_Gokhale.pdf" target="_blank">📄 View My Resume</a>  
+<a class="link-btn" href="SOP_Makarand_Gokhale.pdf" target="_blank">📝 View My SOP</a>  
+<a class="link-btn" href="mailto:makarand0211@gmail.com">✉️ Email Me</a>  
+<a class="link-btn" href="tel:+919901252324">📞 Call Me</a>  
+<a class="link-btn" href="https://github.com/Saberzerker" target="_blank" rel="noopener noreferrer">💻 GitHub</a>  
+<a class="link-btn" href="https://www.linkedin.com/in/makarand-gokhale0211/" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>  
 
-    .modal {
-      background-color: var(--card);
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-      width: 90%;
-      max-width: 420px;
-      text-align: left;
-    }
+<div class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</div>  
 
-    .modal input,
-    .modal textarea {
-      width: 100%;
-      margin-bottom: 1rem;
-      padding: 0.75rem;
-      border: 1px solid var(--accent);
-      border-radius: 8px;
-      font-size: 1rem;
-      box-sizing: border-box;
-    }
+<footer>© 2025 Makarand Gokhale | This page is a temporary preview</footer>
 
-    .modal-close {
-      position: absolute;
-      top: 1rem;
-      right: 1.5rem;
-      font-size: 1.2rem;
-      cursor: pointer;
-      color: var(--muted, #888);
-    }
-
-    .submit-btn {
-      background: var(--accent);
-      color: white;
-      border: none;
-      padding: 0.9rem 1.5rem;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-      width: 100%;
-    }
-
-    .submit-btn:hover {
-      background: #0044cc;
-    }
-  </style>
-</head>
-<body>
-  <main>
-    <h1>Makarand Gokhale</h1>
-    <h2>Deep Learning Technologist</h2>
-    <div class="badge">🚧 Portfolio v0 – Work in Progress</div>
-
-    <p>Scan or click below to access everything you need:</p>
-
-    <a class="link-btn" href="Resume_Makarand_Gokhale.pdf" target="_blank">📄 View My Resume</a>
-    <a class="link-btn" href="SOP_Makarand_Gokhale.pdf" target="_blank">📝 View My SOP</a>
-    <a class="link-btn" href="mailto:makarand0211@gmail.com">✉️ Email Me</a>
-    <a class="link-btn" href="tel:+919901252324">📞 Call Me</a>
-    <a class="link-btn" href="https://github.com/Saberzerker" target="_blank">💻 GitHub</a>
-    <a class="link-btn" href="https://www.linkedin.com/in/makarand-gokhale0211/" target="_blank">🔗 LinkedIn</a>
-
-    <button class="link-btn" onclick="openModal()">✍️ Share Your Info</button>
-
-    <div class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</div>
-    <footer>© 2025 Makarand Gokhale | This page is a temporary preview</footer>
-  </main>
-
-  <!-- Modal -->
-  <div class="modal-overlay" id="modal">
-    <div class="modal">
-      <span class="modal-close" onclick="closeModal()">✖</span>
-      <h3 style="margin-bottom: 1rem;">Share your info (optional)</h3>
-      <form onsubmit="submitToGoogleSheets(event)">
-        <input type="text" name="name" placeholder="Name (optional)">
-        <input type="email" name="email" placeholder="Email (optional)">
-        <input type="tel" name="phone" placeholder="Phone (optional)">
-        <textarea name="message" placeholder="Write something..." rows="3"></textarea>
-        <button type="submit" class="submit-btn">📥 Submit</button>
-      </form>
-    </div>
-  </div>
-
-  <script>
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (prefersDark) document.body.classList.add('dark');
-
-    function toggleTheme() {
-      document.body.classList.toggle('dark');
-    }
-
-    function openModal() {
-      document.getElementById('modal').style.display = 'flex';
-    }
-
-    function closeModal() {
-      document.getElementById('modal').style.display = 'none';
-    }
-
-    async function submitToGoogleSheets(e) {
-      e.preventDefault();
-      const form = e.target;
-      const data = {
-        name: form.name.value,
-        email: form.email.value,
-        phone: form.phone.value,
-        message: form.message.value
-      };
-
-      try {
-        const res = await fetch("https://script.google.com/macros/s/AKfycbxwrrq58jlKuvPCJNsVga77rbSjQWjkiiXtzeq_0b0/exec", {
-          method: "POST",
-          body: JSON.stringify(data),
-          headers: {
-            "Content-Type": "application/json"
-          }
-        });
-        if (res.ok) {
-          alert("✅ Submitted successfully!");
-          closeModal();
-          form.reset();
-        } else {
-          alert("❌ Submission failed.");
-        }
-      } catch (err) {
-        alert("❌ Network error.");
-      }
-    }
-  </script>
-</body>
+  </main>    <script>  
+    function toggleTheme() {  
+      document.body.classList.toggle('dark');  
+    }  
+  
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;  
+    if (prefersDark) document.body.classList.add('dark');  
+  </script>  </body>  
 </html>
